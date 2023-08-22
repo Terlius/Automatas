@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="form-container">
+        <h2 class="form-title">Ingresa tu autómata no determinista</h2>
+        <form (submit)="convertirAFN()" [formGroup]="fGroup">
+
+            <mat-form-field class="form-field">
+                <mat-label>Estados:</mat-label>
+                <input matInput formControlName="estados" required>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label>Alfabeto:</mat-label>
+                <input matInput formControlName="alfabeto" required>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label>Estado Inicial:</mat-label>
+                <input matInput formControlName="estadoInicial" required>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label>Estados Finales:</mat-label>
+                <input matInput formControlName="estadosFinales" required>
+            </mat-form-field>
+
+            <div class="containerTransiciones" formArrayName="transiciones">
+                <div class="transicion-container" *ngFor="let transicionCtrl of transiciones.controls; let i=index"
+                    [formGroupName]="i">
+                    <div class="transicion-fields">
+                        <mat-form-field class="form-field">
+                            <input matInput id="origen" formControlName="origen" placeholder="Origen">
+                        </mat-form-field>
+                        <mat-form-field class="form-field">
+                            <input matInput id="" formControlName="simbolo" placeholder="Símbolo">
+                        </mat-form-field>
+                        <mat-form-field class="form-field">
+                            <input matInput formControlName="destino" placeholder="Destino">
+                        </mat-form-field>
+                    </div>
+                    <button mat-icon-button color="warn" (click)=" eliminarTransicion(i)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                   
+                </div>
+            </div>
+            <div class="acciones">
+                <button id="agregarTransicion" mat-raised-button color="primary" display
+                    (click)="agregarTransicion()">Agregar Transición</button>
+                <button id="convertirAutomata" mat-raised-button color="primary" type="submit">Convertir
+                    Automata</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="graph-container">
+        <div id="network" style="width: 100%; height: 100vh"></div>
+    </div>
+</div>

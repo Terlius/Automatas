@@ -1,0 +1,105 @@
+
+  .container{
+    background-color: #e7e1e1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: 10px;
+    display: flex;
+  }
+  .form-container {
+    flex: 1;
+    padding: 20px;
+    margin: 10px 20px 0 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    justify-content: center;
+  }
+  
+  .graph-container {
+    flex: 3;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .form-field {
+    width: 80%;
+    margin-bottom: 10px;
+    margin: auto;
+  }
+  
+  .transicion-container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .transicion-fields {
+    display: flex;
+    width: 400px; /* Tamaño fijo para los campos de transición */
+  }
+  
+  .transicion-fields .form-field {
+    flex: 1;
+    margin-right: 10px;
+    text-align: center;
+    
+}
+  
+  button {
+    margin-top: 10px;
+  }
+  
+ 
+  .form-container {
+    flex: 1;
+    padding: 20px;
+    
+  }
+  
+  .graph-container {
+    flex: 1;
+    padding: 20px;
+  }
+
+  mat-form-field {
+    margin: 10px;
+  }
+  
+  .transiciones{
+    text-align: center;
+    align-items: center;
+  }
+
+  #agregarTransicion{
+    margin: 10px;
+    background-color: #276f8b; /* Green */
+  }
+
+  #convertirAutomata{
+    margin: 10px;
+  }
+  .acciones {
+   
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+
+  .containerTransiciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
